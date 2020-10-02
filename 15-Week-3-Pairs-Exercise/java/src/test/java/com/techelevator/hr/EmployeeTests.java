@@ -37,6 +37,8 @@ public class EmployeeTests {
     }
 
 
+    // You'll also need to add a test for `getBalanceDue` in the `EmployeeTests` class.
+    // Keep in mind the discount.
     @Test
     public void getBalanceDue() {
         fail("IMPLEMENT ME");
