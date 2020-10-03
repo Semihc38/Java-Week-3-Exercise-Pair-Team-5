@@ -1,5 +1,9 @@
 package com.techelevator.hr;
 
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
 import com.techelevator.Person;
 
 public class Employee extends Person {
@@ -64,5 +68,26 @@ public class Employee extends Person {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+    
+    /***************************************************************
+	 * Implemented from interface 
+	 ***************************************************************/
+    
+    @Override
+    public double getBalanceDue(Map<String, Double> servicesRendered) {
+    	
+    
+    	double price=0;
+    	for(Entry<String, Double> each: servicesRendered.entrySet()) {
+    			if(each.getKey().equals("Walking")) {
+    					//servicesRendered.put("Walking", each.getValue()/2);
+    					price+=each.getValue()/2;
+    			}else {
+    				price+=each.getValue();
+    			}
+    	}
+    	return price;
 
+    
+    }
 }

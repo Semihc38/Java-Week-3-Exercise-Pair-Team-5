@@ -16,6 +16,8 @@ import static org.junit.Assert.fail;
  ***************************************************************/
 
 public class EmployeeTests {
+	
+	Employee testMethods = new Employee(null, null);
 
     @Test
     public void getFullNameReturnsCorrectFormat() {
@@ -48,6 +50,14 @@ public class EmployeeTests {
     // Keep in mind the discount.
     @Test
     public void getBalanceDue() {
-        fail("IMPLEMENT ME");
+    	Employee employee = new Employee("Alex","Test");
+
+    	Map<String,Double>map=new HashMap<>();
+    	map.put("Grooming", 50.50);
+    	map.put("Walking", 18.00);
+    	map.put("Sitting", 5.25);
+
+    	double expectedPrice=50.50+(18.00/2)+5.25;
+    	assertEquals(expectedPrice,employee.getBalanceDue(map),0.0);
     }
 }

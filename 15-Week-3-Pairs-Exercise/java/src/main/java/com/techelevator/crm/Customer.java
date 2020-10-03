@@ -1,6 +1,10 @@
 package com.techelevator.crm;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
 import com.techelevator.Person;
 
@@ -29,6 +33,7 @@ public class Customer extends Person {
 	
 	public Customer(String firstName, String lastName, String phoneNumber) {
 		super(firstName, lastName);
+		pets = new ArrayList<Pet>();
 		this.phoneNumber = phoneNumber;
 	}
 	
@@ -42,6 +47,7 @@ public class Customer extends Person {
 	public Customer(String firstName, String lastName) {
 		firstName = getFirstName();
 		lastName = getLastName();
+		pets = new ArrayList<Pet>();
 		phoneNumber = "";
 	}
 	
@@ -69,5 +75,22 @@ public class Customer extends Person {
 		this.phoneNumber = phoneNumber;
 	}
 	
-
+	/***************************************************************
+	 * Implemented from interface 
+	 ***************************************************************/
+	
+	@Override
+	public double getBalanceDue(Map<String, Double> servicesRendered) {
+		double price=0;
+		
+		for(Entry<String, Double> each: servicesRendered.entrySet()) {
+	
+			price+=each.getValue();
+		}
+		return price;
+	}
 }
+	
+	
+
+

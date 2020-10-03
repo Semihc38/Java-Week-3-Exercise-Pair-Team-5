@@ -25,8 +25,8 @@ public class Pet {
 	
 	public Pet(String name, String species) {
 		this.name = name;
-		this.species = species;
-		vaccinations = new ArrayList<String>(vaccinations); // I think this sets vaccinations to an arraylist
+		this.species = species; 	
+		vaccinations = new ArrayList<String>();
 	}
 	
 	/***************************************************************
@@ -75,7 +75,19 @@ public class Pet {
 	 ***************************************************************/
 	
 	public String listVaccinations() {
-		return String.join(", ", vaccinations);
+		
+		String string = "";
+		
+		for (int i = 0; i < vaccinations.size(); i++) {
+			
+			if (i != vaccinations.size()-1) {
+				string += vaccinations.get(i) + ", ";
+			
+			} else {
+				string += vaccinations.get(i);
+			}
+		}
+		return string;
 		
 	}
 

@@ -1,6 +1,8 @@
 package com.techelevator;
 
-public class Person {
+import java.util.Map;
+
+public class Person implements Billable{
 
     private String firstName;
     private String lastName;
@@ -41,5 +43,9 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public double getBalanceDue(Map<String, Double> servicesRendered) {
+    	return 0;
     }
 }

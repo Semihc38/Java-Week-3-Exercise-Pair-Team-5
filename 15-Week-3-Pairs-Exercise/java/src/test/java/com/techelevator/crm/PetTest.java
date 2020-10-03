@@ -17,7 +17,12 @@ public class PetTest {
 
 	@Test
 	public void test_for_listVaccinations() {
-		assertEquals("Incorrect String returned from listVaccintations", "Rabies, Distemper, Parvo", testMethods.listVaccinations());
+		
+		testMethods.getVaccinations().add("Rabies");
+		testMethods.getVaccinations().add("Parvo");
+		testMethods.getVaccinations().add("Distemper");
+		
+		assertEquals("Incorrect String returned from listVaccintations", "Rabies, Parvo, Distemper" , testMethods.listVaccinations());
 	}
 
 }
