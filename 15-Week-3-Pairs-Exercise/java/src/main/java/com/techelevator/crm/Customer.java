@@ -1,8 +1,8 @@
-package com.techelevator;
+package com.techelevator.crm;
 
 import java.util.List;
 
-import com.techelevator.crm.Pet;
+import com.techelevator.Person;
 
 /***************************************************************
  * 
