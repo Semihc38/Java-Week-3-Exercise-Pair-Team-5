@@ -8,6 +8,13 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+/***************************************************************
+ * 
+ * You'll also need to add a test for `getBalanceDue`
+ *  in the `EmployeeTests` class. Keep in mind the discount.
+ * 
+ ***************************************************************/
+
 public class EmployeeTests {
 
     @Test

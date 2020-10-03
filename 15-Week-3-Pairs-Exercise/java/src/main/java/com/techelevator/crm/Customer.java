@@ -11,7 +11,6 @@ import com.techelevator.Person;
  * One that accepts three `String` parameters for first name, last name, and phone number.
  * This constructor must set the phone number property, and call the base class constructor for first and last name.
  * One that accepts two `String` parameters for first name and last name.
- * This constructor must call the above constructor with an empty string for phone number.
  * 
  ***************************************************************/
 
@@ -21,8 +20,8 @@ public class Customer extends Person {
 	 * Instance Variables
 	 ***************************************************************/
 	
-	private String phoneNumber;
-	private List<Pet> pets;
+	private String phoneNumber; // Customer's phone number
+	private List<Pet> pets; // collection of customer's pets
 	
 	/***************************************************************
 	 * Constructors
@@ -32,6 +31,13 @@ public class Customer extends Person {
 		super(firstName, lastName);
 		this.phoneNumber = phoneNumber;
 	}
+	
+	/***************************************************************
+	 * 
+	 * This constructor must call the above constructor
+	 *  with an empty string for phone number.
+	 *  
+	 ***************************************************************/
 	
 	public Customer(String firstName, String lastName) {
 		firstName = getFirstName();
